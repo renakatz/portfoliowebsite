@@ -12,6 +12,9 @@
 body{
     background-color: rgb(246, 242, 231);
 }
+a{
+    cursor: pointer;
+}
 
 header{
     position: fixed;
@@ -118,7 +121,7 @@ section{
     font-weight: 600;
 }
 .info-box span{
-    background: rgb(128, 55, 128);
+    background: rgb(139, 102, 71);
     background-clip: text;
     color: transparent;
     font-size: 2rem;
@@ -293,4 +296,63 @@ section{
     width: 3rem;
     height: 3rem;
     object-fit: contain;
+}
+
+@media(max-width:1280px){
+    header{
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+    .about .about-container{
+        gap: 3rem;
+    }
+    .experience-info{
+        flex-direction: column;
+    }
+}
+@media(max-width:768px){
+    header{
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+    header .logo{
+        font-size: 1rem;
+    }
+    .about-container{
+        flex-direction: column;
+    }    
+}
+@media(max-width:600px){
+    header #menu-icon{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 1rem;
+    }
+    .nav-links li{
+        margin-top: 1.5rem;
+        padding: 1rem;
+    }
+    .nav-links.active{
+        display: block;
+    }
+    header{
+        padding: 1rem 5rem;
+    }
+    header .logo{
+        font-size: 1.5rem;
+    }
+    .about-container img{
+        width: 80vw;
+    }
 }
